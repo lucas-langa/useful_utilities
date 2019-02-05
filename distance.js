@@ -1,13 +1,3 @@
-var joburg = {
-	"lat" : -33.9080521,
-	"lon" : 18.4139737
-}
-
-var cpt = {
-	"lat" : -26.2049385,
-	"lon" : 28.0379703
-}
-
 function get_distance(point_a, point_b)
 {
 	var R = 6371 * Math.pow(10,3);
@@ -23,15 +13,5 @@ function get_distance(point_a, point_b)
 	Math.sin(londiff / 2);
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 	var	d = R * c;
-	// return (d/1000);
-		console.log(d/1000);
+	return (d/1000);
 }
-
-get_distance(joburg, cpt);
-// console.log(90 * (Math.PI /180));
-/*
-	var lat1 = -33.9080521  * (Math.PI / 180);
-	var lat2 = -26.2049385 * (Math.PI / 180);
-	var lon1 =  18.4139737* (Math.PI / 180);
-	var lon2 = 28.0379703  * (Math.PI / 180);
-*/
